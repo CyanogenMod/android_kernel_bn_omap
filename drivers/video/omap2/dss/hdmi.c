@@ -920,6 +920,7 @@ DEVICE_ATTR(hdmi_timings, S_IWGRP | S_IWUSR, hdmi_timings_show,
 
 int omapdss_hdmi_display_enable(struct omap_dss_device *dssdev)
 {
+	struct omap_dss_hdmi_data *priv = dssdev->data;
 	int r = 0;
 
 	DSSINFO("ENTER hdmi_display_enable\n");
